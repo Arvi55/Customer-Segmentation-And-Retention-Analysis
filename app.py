@@ -2,23 +2,17 @@ import streamlit as st
 import numpy as np
 import pickle
 
-# -----------------------------
-# Load Model
-# -----------------------------
+
 model = pickle.load(open('churn_model.pkl', 'rb'))
 
-# -----------------------------
-# Page Config
-# -----------------------------
+
 st.set_page_config(
     page_title="Churn Prediction App",
     page_icon="📊",
     layout="centered"
 )
 
-# -----------------------------
-# Sidebar (Project Explanation)
-# -----------------------------
+
 st.sidebar.title("📌 About This Project")
 
 st.sidebar.write("""
@@ -33,16 +27,12 @@ st.sidebar.write("""
 - **Monetary** → Total amount spent by the customer  
 """)
 
-# -----------------------------
-# Main Page
-# -----------------------------
+
 st.title("📊 Customer Churn Prediction")
 
 st.markdown("Enter customer details below:")
 
-# -----------------------------
-# Inputs (MAIN PAGE)
-# -----------------------------
+
 recency = st.number_input(
     "📅 Recency (days since last purchase)",
     min_value=0,
@@ -61,14 +51,11 @@ monetary = st.number_input(
     value=500.0
 )
 
-# -----------------------------
-# Prediction
-# -----------------------------
+
 if st.button("🔍 Predict Churn"):
     input_data = np.array([[recency, frequency, monetary]])
     probability = model.predict_proba(input_data)[0][1]
-    # 🔥 Change threshold here
-    threshold = 0.2
+    
     prediction = 1 if probability > threshold else 0
     st.subheader("📈 Prediction Result")
 
@@ -77,15 +64,13 @@ if st.button("🔍 Predict Churn"):
     else:
         st.success("✅ Customer Likely to Stay")
 
-    # Probability
+    
     st.write(f"**Churn Probability:** {probability:.2f}")
 
-    # Progress bar
+   
     st.progress(int(probability * 100))
 
-    # -----------------------------
-    # Insight Section
-    # -----------------------------
+   
     st.subheader("🧠 Interpretation")
 
     if probability > 0.7:
@@ -95,7 +80,7 @@ if st.button("🔍 Predict Churn"):
     else:
         st.write("🟢 Customer is low risk.")
 
-# -----------------------------
+
 # Footer
 # -----------------------------
 st.markdown("---")
