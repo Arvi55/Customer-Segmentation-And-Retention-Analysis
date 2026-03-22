@@ -50,6 +50,16 @@ Dataset includes:
 
 ---
 
+# 🔍 Data Cleaning & Preprocessing
+
+- Removed missing Customer IDs  
+- Filtered cancelled/negative transactions  
+- Created total revenue column  
+- Aggregated data at customer level  
+- Calculated RFM metrics (Recency, Frequency, Monetary)
+
+---
+
 # 📊 Dashboard Overview
 
 ![Dashboard Overview](https://github.com/Arvi55/Customer-Segmentation-And-Retention-Analysis/blob/main/Images/Page3.png?raw=true)
