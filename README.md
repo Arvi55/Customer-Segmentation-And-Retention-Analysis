@@ -1,4 +1,5 @@
 # 📊 Customer Segmentation & Churn Prediction
+##  End-to-end Data Analytics + Machine Learning project combining Power BI and Streamlit.
 
 This project combines **customer behavior analysis** and **machine learning** to identify high-value customers and predict churn risk.
 
@@ -9,7 +10,7 @@ It integrates:
 
 ---
 
-# 📊 Project Background
+# Project Background
 
 Customer retention is crucial for business growth. This project analyzes transactional data to:
 
@@ -20,7 +21,7 @@ Customer retention is crucial for business growth. This project analyzes transac
 
 ---
 
-# 📊 Analysis Approach
+# Analysis Approach
 
 The project follows a structured workflow:
 
@@ -182,13 +183,15 @@ Dataset includes:
 
 ---
 
-# 🤖 Customer Churn Prediction (ML)
+# 🤖 Machine Learning: Customer Churn Prediction
 
 ## 📌 Overview
 
 A Machine Learning model was built to predict customer churn using RFM features.
 
-## Working Link:- [Click HERE](https://avinash-customer-segmentation-and-retention-analysis.streamlit.app/)
+## 🌐 Live Demo
+
+👉 [Click here to try the app](https://avinash-customer-segmentation-and-retention-analysis.streamlit.app/)
 
 ![Web Image](https://github.com/Arvi55/Customer-Segmentation-And-Retention-Analysis/blob/main/Images/WEB%20IMAGE.png?raw=true)   
 
