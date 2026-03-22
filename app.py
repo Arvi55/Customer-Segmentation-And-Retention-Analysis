@@ -55,6 +55,7 @@ monetary = st.number_input(
 if st.button("🔍 Predict Churn"):
     input_data = np.array([[recency, frequency, monetary]])
     probability = model.predict_proba(input_data)[0][1]
+    threshold = 0.2
     
     prediction = 1 if probability > threshold else 0
     st.subheader("📈 Prediction Result")
